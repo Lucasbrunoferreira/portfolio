@@ -1,21 +1,38 @@
 import type { NextPage } from 'next';
 import { styled } from '@stitches/react';
+import { TopBar, BottomBar, CodeArea, Explorer, NavBar } from 'components';
 import Head from 'next/head';
 
-const Home: NextPage = () => {
-	const H1 = styled('h1', {
-		color: '$highlight',
+const Index: NextPage = () => {
+	const Container = styled('div', {
+		height: '100vh',
+	});
+
+	const CenterWrapper = styled('div', {
+		backgroundColor: '$backgroundPrimary',
+		display: 'flex',
+		height: 'calc(100% - 55px)',
 	});
 
 	return (
-		<div>
+		<>
 			<Head>
 				<title>Lucas Bruno</title>
 			</Head>
 
-			<H1>Home</H1>
-		</div>
+			<Container>
+				<TopBar />
+
+				<CenterWrapper>
+					<NavBar />
+					<Explorer />
+					<CodeArea />
+				</CenterWrapper>
+
+				<BottomBar />
+			</Container>
+		</>
 	);
 };
 
-export default Home;
+export default Index;

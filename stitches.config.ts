@@ -8,10 +8,11 @@ export const { styled, getCssText } = createStitches({
 		colors: {
 			fontPrimary: '#FAFAFA',
 			fontSecundary: '#596E93',
-			backgroundPrimary: '#272A35',
-			backgorundSecundary: '#333845',
-			backgroundHighlight: '#191A21',
-			hover: 'rgba(255, 126, 198, 0.05)',
+			backgroundPrimary: '#333845',
+			backgorundSecundary: '#272A35',
+			backgroundHighlight: '#20222B',
+			backgroundContrast: '#191A21',
+			hover: 'rgba(255, 126, 198, 0.07)',
 			highlight: '#FF7EC6',
 		},
 		fontSizes: {
