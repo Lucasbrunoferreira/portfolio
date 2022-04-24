@@ -8,7 +8,7 @@ const CodeArea = () => {
 
 	return (
 		<Wrapper>
-			<span>CodeArea</span>
+			<div></div>
 		</Wrapper>
 	);
 };

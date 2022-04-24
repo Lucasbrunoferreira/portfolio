@@ -1,30 +1,8 @@
 import { styled } from '@stitches/react';
 import Image from 'next/image';
+import { files } from 'utils';
 
 const NavBar = () => {
-	const routes = [
-		{
-			icon: '/icons/file.svg',
-			path: '',
-			alt: 'About me',
-		},
-		{
-			icon: '/icons/code.svg',
-			path: '',
-			alt: '',
-		},
-		{
-			icon: '/icons/book-open.svg',
-			path: '',
-			alt: '',
-		},
-		{
-			icon: '/icons/phone.svg',
-			path: '',
-			alt: '',
-		},
-	];
-
 	const Wrapper = styled('div', {
 		backgroundColor: '$backgroundPrimary',
 		display: 'flex',
@@ -76,9 +54,14 @@ const NavBar = () => {
 	return (
 		<Wrapper>
 			<div>
-				{routes.map((route, index) => (
+				{files.map((route, index) => (
 					<Option key={index} state={index == 0 ? 'active' : 'none'}>
-						<Image alt={route.alt} width={45} height={45} src={route.icon} />
+						<Image
+							alt={route.alt}
+							width={45}
+							height={45}
+							src={route.navBarIcon}
+						/>
 					</Option>
 				))}
 			</div>
